@@ -1,77 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samwaad Academy of Excellence</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Academy | Excellence in Education</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo-box">
-    <div class="logo-circle">
-      <img src="images/logo.png" alt="Samwaad Academy Logo">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Apex<span>Academy.</span></a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="#contact" class="nav-link btn-nav">Enquire Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <span class="badge">Admissions Open 2025-26</span>
+            <h1>Building Future <br> <span class="gradient-text">Toppers</span> & Leaders</h1>
+            <p>Empowering students with concept-based learning and personalized attention. Join the most trusted coaching institute in the city.</p>
+            <div class="hero-btns">
+                <a href="#courses" class="btn btn-primary">View Courses</a>
+                <a href="https://wa.me/919876543210?text=Hi, I want to enquire about admissions." target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="hero-shape"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container about-container">
+            <div class="about-text">
+                <h6 class="section-subtitle">About Institute</h6>
+                <h2 class="section-title">Committed to <span class="highlight">Academic Excellence</span></h2>
+                <p>At Apex Academy, we believe every student has the potential to excel. With over 10 years of experience, we have mentored thousands of students.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>10+</h3>
+                        <p>Years Exp.</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Toppers</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Dedication</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="abstract-card">
+                    <i class="fas fa-graduation-cap icon-lg"></i>
+                    <h3>Knowledge First</h3>
+                    <p>Building strong foundations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h6 class="section-subtitle">Our Batches</h6>
+                <h2 class="section-title">Courses We Offer</h2>
+                <p>Tailored curriculum for State Board, CBSE & Competitive Exams</p>
+            </div>
+
+            <div class="course-grid">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="card-icon"><i class="fas fa-atom"></i></div>
+                    <h3>8th - 10th Foundation</h3>
+                    <p>Science & Maths special batch for State/CBSE boards. Strong focus on basics.</p>
+                    <button class="btn-outline view-details-btn" data-course="foundation">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>11th & 12th Commerce</h3>
+                    <p>Accounts, Economics, and OC. Expert faculty for board exam preparation.</p>
+                    <button class="btn-outline view-details-btn" data-course="commerce">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="card-icon"><i class="fas fa-dna"></i></div>
+                    <h3>NEET / JEE Prep</h3>
+                    <p>Two-year integrated program for medical and engineering aspirants.</p>
+                    <button class="btn-outline view-details-btn" data-course="jee_neet">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card">
+                    <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Computer Courses</h3>
+                    <p>Basic to Advanced coding, MSCIT, and Python for school students.</p>
+                    <button class="btn-outline view-details-btn" data-course="computer">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h6 class="section-subtitle">Why Apex Academy?</h6>
+                <h2 class="section-title">The Apex Advantage</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h4>Expert Faculty</h4>
+                    <p>Highly qualified teachers with proven track records.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-users"></i>
+                    <h4>Small Batch Size</h4>
+                    <p>Limited students per batch for individual attention.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>Weekly Tests</h4>
+                    <p>Regular assessment and progress tracking for parents.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-rupee-sign"></i>
+                    <h4>Affordable Fees</h4>
+                    <p>Quality education at reasonable pricing with EMI options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section bg-gradient">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title text-white">Success Stories</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The teachers here are amazing. They cleared all my doubts in Maths and Science."</p>
+                    <h4>- Rahul Sharma, Student</h4>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Best coaching class in the area. Personal attention and weekly test reports helped us."</p>
+                    <h4>- Mrs. Iyer, Parent</h4>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"JEE preparation seemed hard, but the faculty here made concepts very easy."</p>
+                    <h4>- Amit Verma, Student</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Address & Map -->
+    <section id="contact" class="section">
+        <div class="container contact-wrapper">
+            <div class="contact-info">
+                <h6 class="section-subtitle">Get In Touch</h6>
+                <h2 class="section-title">Visit Our Center</h2>
+                
+                <div class="info-group">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Apex Academy</strong><br>2nd Floor, Sai Complex, M.G. Road,<br>Pune - 411001</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+91 98765 43210</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>admissions@apexacademy.in</p>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/919876543210" class="btn btn-primary full-width-mobile">Enquire Now</a>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30278.49071060965!2d73.8567!3d18.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c06fd71890b3%3A0x69e623199c0490!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Apex<span>Academy.</span></h3>
+                <p>Building strong foundations for a brighter future.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Apex Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/919876543210?text=Hi, I would like to enquire." class="float-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a>
+
+    <!-- Modal (Popup) -->
+    <div id="batch-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h6 class="modal-subtitle">Course Details</h6>
+                <h2 id="modal-title">Course Name</h2>
+            </div>
+            <div class="modal-body">
+                <div class="batch-info-grid">
+                    <div class="info-card">
+                        <span class="label"><i class="far fa-clock"></i> Batch Timing</span>
+                        <p id="modal-timing">--</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="label"><i class="far fa-calendar-alt"></i> Start Date</span>
+                        <p id="modal-start">--</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="label"><i class="fas fa-calendar-week"></i> Days</span>
+                        <p id="modal-days">--</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="label"><i class="fas fa-video"></i> Mode</span>
+                        <p id="modal-mode">--</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="label"><i class="fas fa-chalkboard-teacher"></i> Faculty</span>
+                        <p id="modal-faculty">--</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="label"><i class="fas fa-hourglass-half"></i> Duration</span>
+                        <p id="modal-duration">--</p>
+                    </div>
+                </div>
+
+                <div class="batch-extra-details">
+                    <div class="detail-row">
+                        <strong>Syllabus:</strong> <span id="modal-syllabus">--</span>
+                    </div>
+                    <div class="detail-row highlight-row">
+                        <strong>Fees:</strong> <span id="modal-fees">--</span>
+                    </div>
+                    <div class="detail-row">
+                        <strong>Available Seats:</strong> <span id="modal-seats" style="color: #ef4444; font-weight: 600;">--</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="modal-whatsapp-btn" target="_blank" class="btn btn-whatsapp full-width">
+                    <i class="fab fa-whatsapp"></i> Enquire for this Batch
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#courses">Courses</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="overlay"></div>
-
-  <div class="hero-content">
-    <h1 id="typingText"></h1>
-    <p class="tagline">Learn Smart. Score Higher. Build Your Future.</p>
-    <a href="#contact" class="cta-btn">Book Free Demo Class</a>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section" id="about">
-  <h2>About Sahyadri Class </h2>
-  <p>
-    Sahyadri Class provides quality education with experienced teachers,
-    focused mentoring, and result-oriented teaching for academic success.
-  </p>
-</section>
-
-<!-- COURSES -->
-<section class="section light" id="courses">
-  <h2>Courses Offered</h2>
-  <div class="cards">
-    <div class="card">Class 8 – 10 (CBSE / State Board)</div>
-    <div class="card">Class 11 – 12 (Science / Commerce)</div>
-    <div class="card">Competitive Exam Preparation</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-  <h2>Contact for Admissions</h2>
-  <p>📍 Local Area, City Name</p>
-  <p>📞 +91 8855939925</p>
-  <p>📧 coaching@email.com</p>
-</section>
-
-<!-- WHATSAPP -->
-<a href="#" class="whatsapp-float">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
